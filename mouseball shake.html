@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        table, th, td {
+        border:1px solid black;
+}
+    </style>
+</head>
+<body>
+    <button onclick="getUsers()">Get Users</button>
+    <table>
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Website</th>
+    </tr>
+    <tr>
+        <td id="tablebody"></td>
+    </tr>
+    </table>
+
+    <script>
+        function getUsers(){
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/users",
+                type: "GET",
+                dataType: "application/json",
+                contentType: "json",
+                
+                success: function(data){
+                    var tabledata = "";
+                    id = 1;
+
+                    for(var i=0;i<data.length;i++){
+                        tabledata += `<tr>`
+                                    '<td>'+ ${data[i].id} + '</td>'+
+                                    `<td>`+ data[i].name + `</td>`+
+                                    `<td>`+ data[i].email + `</td>`+
+                                    `<td>`+ data[i].phone + `</td>`+
+                                    `<td>`+ data[i].website + `</td>`
+
+                        tabledata += `</tr>`;
+                    }
+   
+
+                },
+                error: function(data){
+                    console.log("Error");
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
