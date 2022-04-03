@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is H1</h1>
+  
+    <button onclick="btn()">Submit</button>
+    <script>
+
+        var html = document.querySelector("html");
+        console.log(html);
+        var head = html.firstChild;
+        var text = head.nextSibling;
+        console.log(text.nextSibling);
+        var body = text.nextSibling;
+        console.log(body.firstChild);
+
+        var text1 = body.firstChild;
+        var h1 = text1.nextSibling;
+        console.log(h1);
+        console.log(h1.previousSibling);
+
+        
+    
+    </script>
+</body>
+</html>

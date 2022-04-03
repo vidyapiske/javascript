@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script ></script>
+</head>
+<body>
+   <input type="text" id="name" placeholder="enter username here">
+   <input type="text" name="password">
+   <h1 class="h11" id="h1">This is h1</h1>
+   <h2 onclick="remove()">remove</h2>
+   <button onclick="btn()" id="btn">Submit</button>
+   
+   <div id="result"></div>
+    
+    <script>
+       /*var h1 = document.getElementById('h1');
+       h1.onclick = function(){
+           h1.style.color = "red",
+           h1.style.backgroundColor = "black"
+       }*/
+
+       /*h1.addEventListener('click', handler)
+       function handler(){
+           h1.style.color = "red";
+           h1.style.backgroundColor = "black"
+
+       }
+       function remove(){
+           h1.removeEventListener('click', handler);
+       }*/
+
+       /*h1.addEventListener('click', h1Handler);
+           function h1Handler(){
+               h1.style.color = "red";
+               h1.style.backgroundColor = "black";
+
+           }
+           function remove(){
+               h1.removeEventListener('click', h1Handler);
+           }*/
+
+        function btn(){
+            document.getElementById("h1").style.color = "red";
+            document.getElementById("btn").style.display = "none";
+            
+            
+
+        }
+       
+
+    
+    
+    </script>
+</body>
+</html>

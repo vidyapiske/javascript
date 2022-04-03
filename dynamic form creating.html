@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+
+    <script>
+        var form = document.createElement("form");
+        var username = document.createElement("input");
+        username.type="text";
+        username.placeholder="username";
+        username.id="uname";
+
+        var password = document.createElement("input");
+        password.type="password";
+        password.placeholder="password";
+        password.id="password";
+
+
+        var button = document.createElement("input");
+        button.type="submit";
+        button.placeholder = "Submit";
+
+
+        console.log(username);
+        console.log(password);
+        console.log(button);
+
+        console.log(form);
+        
+
+        form.appendChild(username);
+        form.appendChild(password);
+        form.appendChild(button);
+        body.appendChild(form);
+    </script>
+    
+</body>
+</html>
